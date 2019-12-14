@@ -5,4 +5,12 @@ class Anagram
   def recognize
     @word.split()
   end
-end 
+end
+
+word.scrambled == word
+> false
+> "cat".eql?("dog")
+def in_range?(number)
+  (number < 5) | (number > 10)
+end
+.matches 
