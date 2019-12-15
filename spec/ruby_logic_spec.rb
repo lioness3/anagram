@@ -6,8 +6,8 @@ describe('#Anagram')do
     test = Anagram.new('ate','eat')
   expect(test.recognize).to(eq(true))
   end
-  # it('recognizes words as anagrams case excluded') do
-  #   test = Anagram.new('Ate','Eat')
-  # expect(test.recognize).to(eq(false))
-  # end
+  it('recognizes words as anagrams case excluded') do
+    test = Anagram.new('Ate','Eat')
+  expect(test.recognize).to(eq(true))
+  end
 end

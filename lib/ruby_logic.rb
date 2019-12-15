@@ -3,15 +3,16 @@ class Anagram
     @word1 = word1
     @word2 = word2
   end
+# splits the user input into seperate letters and sorts them alphabetically to see if they are the same
   def recognize
-    split_word1 = @word1.split(//).sort
-    split_word2 = @word2.split(//).sort
+    split_word1 = @word1.downcase.split(//).sort
+    split_word2 = @word2.downcase.split(//).sort
    if split_word1 === split_word2
      return true
-
-
+   end
+   puts split_word1
+   puts split_word2
   end
-end
 end
 
 # word.scrambled == word
