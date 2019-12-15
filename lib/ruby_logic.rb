@@ -4,8 +4,14 @@ class Anagram
     @word2 = word2
   end
   def recognize
-    @word1.eql?(@word2)
+    split_word1 = @word1.split(//).sort
+    split_word2 = @word2.split(//).sort
+   if split_word1 === split_word2
+     return true
+
+
   end
+end
 end
 
 # word.scrambled == word
