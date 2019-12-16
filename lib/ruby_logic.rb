@@ -1,4 +1,5 @@
 class Anagram
+  attr_accessor(:split_word1, :split_word2, :vowel_count1, :vowel_count2)
   def initialize(word1, word2)
     @word1 = word1
     @word2 = word2
@@ -7,7 +8,6 @@ class Anagram
     @vowel_count1
     @vowel_count2
   end
-  attr_reader(:split_word1, :split_word2, :vowel_count1, :vowel_count2)
 
 # splits the user input into seperate letters and sorts them alphabetically to see if they are the same
   def recognize
@@ -20,19 +20,28 @@ class Anagram
     end
   end
 
-  #   def real_word
-  # @vowel_count1 = @split_world1.to_s.count 'aeiouy'
-  #    @vowel_count2 = @split_word2.to_s.count 'aeiouy'
-  #    puts @vowel_count1
-  #    puts @vowel_count2
-  #   end
+  def real_word
+    word = @word1 + @word2
+    vowels = ['a','e','i','o','u','y']
+      vowels.each do |vowel|
+      if word.include? vowel
+    "word"
+  elsif
+    "enter a real word"
+
+  end
+end
+  end
 
 
-    def antigram
-      if (@split_world1.to_s.length) == (@split_world2.to_s.length)
-          "equal length"
-      elsif
-          'These words are Antigrams'
+
+
+
+  def antigram
+    if (@split_world1.to_s.length) === (@split_world2.to_s.length)
+     "equal length"
+    elsif
+    'These words are Antigrams'
     end
   end
 end

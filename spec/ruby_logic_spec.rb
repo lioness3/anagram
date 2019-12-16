@@ -15,9 +15,9 @@ describe('#Anagram')do
     test.recognize()
     expect(test.antigram).to(eq("equal length"))
   end
-  # it('recognizes input as a word if it contains vowels') do
-  #   test = Anagram.new('Ate','xlp')
-  #   test.recognize()
-  #   expect(test.real_word).to(eq('includes vowels'))
-  # end
+  it('recognizes input as a word if it contains vowels') do
+    test = Anagram.new('Ate','ear')
+    test.recognize()
+    expect(test.real_word).to(eq('includes vowels'))
+  end
 end
