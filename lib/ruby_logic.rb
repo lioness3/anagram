@@ -4,8 +4,10 @@ class Anagram
     @word2 = word2
     @split_word1
     @split_word2
+    @vowel_count1
+    @vowel_count2
   end
-  attr_reader(:split_word1, :split_word2)
+  attr_reader(:split_word1, :split_word2, :vowel_count1, :vowel_count2)
 
 # splits the user input into seperate letters and sorts them alphabetically to see if they are the same
   def recognize
@@ -19,14 +21,12 @@ class Anagram
   end
 
   #   def real_word
-  #     check1 = @world1.split(//)
-  #     check2 = @world2.split(//)
-  #     vowel_string = "aeiou"
-  #     vowel = vowel_string.split(//)
-  #     if check1.include?vowel && check2.include?vowel
-  #     puts "includes vowel"
+  # @vowel_count1 = @split_world1.to_s.count 'aeiouy'
+  #    @vowel_count2 = @split_word2.to_s.count 'aeiouy'
+  #    puts @vowel_count1
+  #    puts @vowel_count2
   #   end
-  # end
+
 
     def antigram
       if (@split_world1.to_s.length) == (@split_world2.to_s.length)
