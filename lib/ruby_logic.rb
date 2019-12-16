@@ -19,23 +19,13 @@ class Anagram
       return "yes"
     end
   end
-
+# searches all entered characters for vowels
   def real_word
-    word = @word1 + @word2
-    vowels = ['a','e','i','o','u','y']
-      vowels.each do |vowel|
-      if word.include? vowel
-    "word"
-  elsif
-    "enter a real word"
-
-  end
+    word = @split_word1 + @split_word2
+   if word.count('aeiouy') === 0
+     "enter a new word"
+   end
 end
-  end
-
-
-
-
 
   def antigram
     if (@split_world1.to_s.length) === (@split_world2.to_s.length)
