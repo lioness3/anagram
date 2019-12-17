@@ -9,24 +9,29 @@ class Anagram
     @vowel_count2
   end
 
+  def delete_spaces
+     @word1.split(/\W/)
+     @word2.split(/\W/)
+  end
+
 # splits the user input into seperate letters and sorts them alphabetically to see if they are the same
   def recognize
     @split_word1 = @word1.downcase.split(//).sort
     @split_word2 = @word2.downcase.split(//).sort
 
     if @split_word1 === @split_word2
-
       return "yes"
+
     end
   end
 # searches all entered characters for vowels
   def real_word
     word = @split_word1 + @split_word2
    if word.count('aeiouy') === 0
-     "enter a new word"
+    'Enter an actual word'
    end
-end
-
+ end
+# compares word lengths to determine if words can be Antigrams
   def antigram
     if (@split_world1.to_s.length) === (@split_world2.to_s.length)
      "equal length"
@@ -35,12 +40,3 @@ end
     end
   end
 end
-
-
-# word.scrambled == word
-# > false
-# > "cat".eql?("dog")
-# def in_range?(number)
-#   (number < 5) | (number > 10)
-# end
-# .matches

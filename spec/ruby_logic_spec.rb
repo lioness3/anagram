@@ -18,6 +18,10 @@ describe('#Anagram')do
   it('recognizes input as a word if it contains vowels') do
     test = Anagram.new('jjj','trk')
     test.recognize()
-    expect(test.real_word).to(eq('includes vowels'))
+    expect(test.real_word).to(eq('Enter an actual word'))
+  end
+  it('recognizes a sentance without spacing or punctucation') do
+    test = Anagram.new('We went here','Or they go there')
+    expect(test.delete_spaces).to(eq(''))
   end
 end
