@@ -12,11 +12,9 @@ This project demonstrates the understanding of testing with rspec.
 #  _Specification Chart_
 | Behavior  | Input  | Output  |
 |--------------|-----------|-----------|
-|Check if two words are anagrams|"tea/ate "| "
-These words are anagrams"|
+|Check if two words are anagrams|"tea/ate"|"These words are anagrams"|
 |Account for the possibility that words might have different cases but should still be anagram| "tea/ate " | "These are anagrams" |
-|Add a rule to check if the inputs are words
-|"yurb"|"please enter a real word"|
+|Add a rule to check if the inputs are words|"yurb"|"please enter a real word"|
 |Checks for antigrams|"hi/bye"| "These words have no letter matches and are antigrams"|
 |handles multiple words|"sentance goes here"| spaces are removed and words are compared|
 ******************
