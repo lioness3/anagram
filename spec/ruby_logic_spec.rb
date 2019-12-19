@@ -22,6 +22,6 @@ describe('#Anagram')do
   end
   it('recognizes a sentance without spacing or punctucation') do
     test = Anagram.new('We went here','Or they go there')
-    expect(test.delete_spaces).to(eq(''))
+    expect(test.delete_spaces).to(eq(['Or',"they","go","there"]))
   end
 end
